@@ -36,7 +36,7 @@ Switch back to Object mode.
 
 Select the hair mesh and while holding in shift, select the hair cap. It’s important to select the hair mesh first.
 
-Select the “Hair” menu on the right-hand side of the 3D viewport.
+Select the “DazHairConverter” menu on the right-hand side of the 3D viewport.
 
 The hair converter has three parameters:
 
@@ -69,8 +69,6 @@ Changing the Endpoint (under Children->Roughness) to .001 or .002 can improve th
 To add “loose hairs” for meshes that do not already have a lot of thin cards, use the Random and Threshold settings under Roughness. For most hair, a Random setting of .05 to .07 and a Threshold setting of .6 to .7 works well.
 
 The material for the original hair cap is left in place. Sometimes it looks better without the hair cap. If you do not want to render the hair cap then switch off “Show Emitter” in the particle settings of the first particle slot (can be found in the Viewport Display and Render sub panels)
-
-Take a look at this video https://www.youtube.com/watch?v=Ge1qWMG-U90. It’s a little annoying, but it explains the hair settings thoroughly.
 
 It is now possible to create several different particle systems for the hair if you choose to do so. If you select a subset of cards before running the conversion, the converter will only convert the selected cards. It will not remove any converted particles, just add new particle slots for the selected cards.
 
