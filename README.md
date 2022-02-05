@@ -4,7 +4,7 @@ Original:-
 https://www.daz3d.com/forums/discussion/445851/hair-converter-add-on-for-blender
 
 Original description:-
-nstall the add-on like you would install any other blender add-on.
+install the add-on like you would install any other blender add-on.
 
 The add-on can now convert most hair made of “hair cards”. The hair cards must consist of faces with 4 vertices (quads). It cannot convert hair with triangles or n-gons. It will also fail to convert cards that fold back on themselves or cards that do not start on or near the skull. Toulouse hair is an example of such hair. It will convert the hair, but some cards do not start at the skull, so the generated root particles will be wrong.
 
