@@ -313,7 +313,16 @@ class HairConverter:
         if render_amount > 0:
             pset.rendered_child_count = render_amount
             pset.child_type = 'SIMPLE'
-            pset.child_nbr = render_amount
+            
+            # Support for both older Blender versions and Blender 4.2.1 LTS and later
+            # Blender 4.2.1 and later replaced 'child_nbr' with 'child_count'
+            if hasattr(pset, 'child_nbr'):
+                # For older versions of Blender
+                pset.child_nbr = render_amount
+            elif hasattr(pset, 'child_count'):
+                # For Blender 4.2.1 LTS and later
+                pset.child_count = render_amount
+
             pset.child_length = .95
             pset.child_length_threshold = .5
             pset.child_radius = self.scale(self.strandRadius)
