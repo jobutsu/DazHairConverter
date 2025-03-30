@@ -396,8 +396,14 @@ def isCornerVert(vert):
 def createHairMaterial(hairName):
     mat = bpy.data.materials.new(hairName)
     mat.use_nodes= True
-    mat.blend_method = 'HASHED'
-    mat.shadow_method = 'HASHED'
+
+    if bpy.app.version < (4,2,0):
+        mat.blend_method = 'HASHED'
+        mat.shadow_method = 'HASHED'
+    else:
+        mat.surface_render_method = 'DITHERED'
+        mat.use_transparent_shadow = True  # Enable transparent shadows
+        
     mat.node_tree.nodes.clear()
     layout = NodeLayout(mat.node_tree, [300,300,300,300], [400, 200, 200])    
     links = mat.node_tree.links
