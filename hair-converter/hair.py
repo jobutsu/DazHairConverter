@@ -397,7 +397,7 @@ def createHairMaterial(hairName):
     mat = bpy.data.materials.new(hairName)
     mat.use_nodes= True
 
-    if bpy.app.version < (4,2,2):
+    if bpy.app.version < (4,2,0):
         mat.blend_method = 'HASHED'
         mat.shadow_method = 'HASHED'
     else:
